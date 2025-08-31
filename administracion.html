@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tbtha.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+      <style>
+    body {
+      min-height: 100vh;
+    }
+    .sidebar {
+      background-color: #f8f9fa;
+      border-right: 1px solid #dee2e6;
+    }
+    .sidebar a {
+      display: block;
+      padding: 1rem;
+      color: #333;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      background-color: #e9ecef;
+    }
+    .content-section {
+      display: none;
+    }
+    .content-section.active {
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+      }
+    }
+  </style>
+
+</head>
+<body class="d-flex flex-column min-vh-100"> <!--para un body flex para pegar el footer abajo-->
+    <main class="flex-grow-1"> 
+    <div class="container">
+        <!---------------------------------------------------------------------navbar------------------------------------------------------------------>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/marca/logo.jpeg" alt="" width="100%" height="auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="inicio.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proyectos</a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="crochetDropdown">
+                        <li><a class="dropdown-item" href="productos_winter.html">Winter</a></li>
+                        <li><a class="dropdown-item" href="productos_summer.html">Summer</a></li>
+                        <li><a class="dropdown-item" href="productos.html">All</a></li>
+                    </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registro.html">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="me.html">Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        <!---------------------------------------------------------------------navbar------------------------------------------------------------------>
+
+        <!---------------------------------------------------------------------seccion ------------------------------------------------------------->
+
+  <main class="flex-grow-1">
+    <div class="container-fluid">
+
+
+      <!-- Panel Admin -->
+      <div class="row">
+        <!-- Menú lateral -->
+        <nav class="col-12 col-md-3 col-lg-2 sidebar mb-3 mb-md-0">
+          <h4 class="text-center mt-4">Admin</h4>
+          <a href="#" onclick="mostrarSeccion('usuarios')">Usuarios</a>
+          <a href="#" onclick="mostrarSeccion('productos')">Productos</a>
+        </nav>
+
+        <!-- Contenido principal -->
+        <main class="col-12 col-md-9 col-lg-10 p-4">
+          
+          <!-- Sección Usuarios -->
+          <section id="usuarios" class="content-section active">
+            <h3>Lista de Usuarios</h3>
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover mt-3">
+                <thead class="table-light">
+                  <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="text" class="form-control" value="1" readonly></td>
+                    <td><input type="text" class="form-control" value="Tabatha"></td>
+                    <td><input type="email" class="form-control" value="tabatha@email.com"></td>
+                    <td>
+                      <select class="form-select">
+                        <option selected>Administrador</option>
+                        <option>Cliente</option>
+                      </select>
+                    </td>
+                    <td><button class="btn btn-sm btn-dark">Guardar</button></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" class="form-control" value="2" readonly></td>
+                    <td><input type="text" class="form-control" value="Lucía"></td>
+                    <td><input type="email" class="form-control" value="lucia@email.com"></td>
+                    <td>
+                      <select class="form-select">
+                        <option>Administrador</option>
+                        <option selected>Cliente</option>
+                      </select>
+                    </td>
+                    <td><button class="btn btn-sm btn-dark">Guardar</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Sección Productos -->
+          <section id="productos" class="content-section">
+            <h3>Lista de Productos</h3>
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover mt-3">
+                <thead class="table-light">
+                  <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="text" class="form-control" value="101" readonly></td>
+                    <td><input type="text" class="form-control" value="Bufanda tejida"></td>
+                    <td><input type="text" class="form-control" value="Bufanda suave de lana natural, ideal para días fríos."></td>
+                    <td>
+                      <select class="form-select">
+                        <option selected>Winter</option>
+                        <option>Summer</option>
+                        <option>All</option>
+                      </select>
+                    </td>
+                    <td><input type="text" class="form-control" value="$12.000"></td>
+                    <td><input type="number" class="form-control" value="8"></td>
+                    <td><button class="btn btn-sm btn-dark">Guardar</button></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" class="form-control" value="102" readonly></td>
+                    <td><input type="text" class="form-control" value="Top de verano"></td>
+                    <td><input type="text" class="form-control" value="Top liviano y fresco tejido en algodón, perfecto para el verano."></td>
+                    <td>
+                      <select class="form-select">
+                        <option>Winter</option>
+                        <option selected>Summer</option>
+                        <option>All</option>
+                      </select>
+                    </td>
+                    <td><input type="text" class="form-control" value="$9.500"></td>
+                    <td><input type="number" class="form-control" value="15"></td>
+                    <td><button class="btn btn-sm btn-dark">Guardar</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+        </main>
+      </div>    
+
+          <script>
+      function mostrarSeccion(id) {
+        const secciones = document.querySelectorAll('.content-section');
+        secciones.forEach(sec => sec.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+      }
+    </script>
+      </div>
+    </main>
+
+
+
+
+        <!---------------------------------------------------------------------seccion-------------------------------------------------------------------->
+        
+        <!---------------------------------------------------------------------footer------------------------------------------------------------------>
+        <!--https://icons8.com/icons/set/instagram-y-facebook-->
+        <footer class="pt-4 border-bottom-dark mt-5">
+            <div class="container">
+                <hr class="my-4"> 
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="col mt-3 text-center">
+                            <a href="https://www.instagram.com/tejedoraypunto/"><img src="img/otros/icons8-instagram-30.png" alt=""></a>
+                            <a href="##" ><img src="img/otros/icons8-facebook-30.png" alt=""></a>
+                        </div>
+                        <p class="mt-3 mb-0">© 2020 | by <a href="me.html">tbtha.</a></p>
+                    </div>
+                </div>
+                <hr class="my-4"> 
+            </div>
+        </footer>
+        <!---------------------------------------------------------------------footer------------------------------------------------------------------>
+                <!-- Script para alternar secciones -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
