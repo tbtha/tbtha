@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tejedoraypunto</title>
+    <title>tbtha.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body class="d-flex flex-column min-vh-100"> <!--para un body flex para pegar el footer abajo-->
-    <main class="flex-grow-1"> 
+<body class="d-flex flex-column min-vh-100">
+    <main class="flex-grow-1">
     <div class="container">
         <!---------------------------------------------------------------------navbar------------------------------------------------------------------>
         <nav class="navbar navbar-expand-lg navbar-custom">
@@ -40,47 +40,36 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contacto</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="carrito.html"><img src="icons8-shopping-cart.gif" alt=""><img src="img/otros/icons8-shopping-cart.gif" alt=""></a>
+                        
+                    </li>
                 </li>
             </ul>
             </div>
         </div>
         </nav>
         <!---------------------------------------------------------------------navbar------------------------------------------------------------------>
-        <!---------------------------------------------------------------------seccion------------------------------------------------------------------>
-        <section class="container py-5">
-        <header class="text-center mb-4">
-            <h3 class="display-4 fw-semibold" style="letter-spacing: 1px;">About me.</h3>
-        </header>
 
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <!-- <img src="img/otros/aboutme.jpeg" alt="" width="100%" height="auto" class="mb-4 rounded"> -->
-                <p class="fs-5 text-muted">
-                    Hola, soy Tabatha. En <strong>Tejedora y Punto</strong> diseño y creo piezas tejidas a mano, pensadas para quienes valoran lo único, lo hecho con dedicación y lo funcional con estilo.
-                </p>
-                <p class="fs-5 text-muted">
-                    Aprendí a tejer durante la pandemia, buscando nuevas formas de ocupar mi tiempo. Lo que comenzó como un pasatiempo se convirtió en una forma de trabajo y expresión. Hoy, cada prenda que ofrezco está hecha por mí, desde el diseño hasta el último punto.
-                </p>
-                <p class="fs-5 text-muted">
-                    Este sitio reúne mi catálogo de tejidos, junto con algunos artículos y contenidos que comparto sobre el proceso, los materiales y el valor de lo artesanal. Gracias por visitar mi espacio. Espero que encuentres algo que te acompañe y te inspire.
-                </p>
-                <!-- Imagen alineada a la derecha al final -->
-                <div class="text-end mt-4">
-                    <img src="img/marca/bytbtha blanco.png" alt="by tabatha" style="width: 50%; height: auto;">
-                </div>
-            
-            </div>
-        </div>
-        </section>
-        
-        <!---------------------------------------------------------------------seccion------------------------------------------------------------------>
-        
+        <!---------------------------------------------------------------------carrito------------------------------------------------------------------>
+
+    <div class="container py-5">
+      <h2 class="text-center mb-4">Carrito</h2>
+      <div id="carritoContainer" class="row"></div>
+      <div class="text-center mt-4">
+        <button class="btn btn-danger" onclick="vaciarCarrito()">Vaciar carrito</button>
+      </div>
+    </div>
+
+        <!---------------------------------------------------------------------carrito------------------------------------------------------------------>
+
+    
     </div>
     </main>
         
         <!---------------------------------------------------------------------footer------------------------------------------------------------------>
         <!--https://icons8.com/icons/set/instagram-y-facebook-->
-         <footer class="pt-4 border-bottom-dark mt-5">
+        <footer class="pt-4 border-bottom-dark mt-5">
             <div class="container">
                 <hr class="my-4"> 
                 <div class="row">
@@ -95,9 +84,8 @@
                 <hr class="my-4"> 
             </div>
         </footer>
-         <!---------------------------------------------------------------------footer------------------------------------------------------------------>
-
-
+        <!---------------------------------------------------------------------footer------------------------------------------------------------------>
+    <script src="js/carrito.js"></script>            
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
